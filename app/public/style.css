@@ -1,0 +1,13 @@
+#input{
+	margin: 10px;
+}
+
+.question{
+font-size: 19px;
+font-family: 'Dosis', sans-serif;
+}
+
+label{
+font-family: 'Dosis', sans-serif;
+font-size: 17px;
+}
