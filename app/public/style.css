@@ -15,3 +15,15 @@ font-size: 17px;
 .modal-img{
 	width: 100%;
 }
+.modal-header{
+	font-family: 'Kanit', sans-serif;
+	border-bottom: 0px; 
+    text-align: center;
+}
+.modal-body{
+	padding: 0px 15px;
+}
+#modal-subtitle{
+	font-family: 'Arima Madurai', cursive;
+	
+}
