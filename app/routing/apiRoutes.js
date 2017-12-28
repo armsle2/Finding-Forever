@@ -13,16 +13,15 @@ module.exports = function(app) {
 
     app.post('/api/friends', function(req, res) {
 
-
         friends.forEach((results, index, arr) => {
             var totalDiff = [];
             var search = results.scores
             var name = results.name
-            
+
             search.forEach((results, index, arr) => {
                 var friendArr = results;
-                var userArr = user.scores[index];
-                var diff = Math.abs(friendArr - userArr);
+                var userScores = parseFloat(req.body['scores[]'][index]);
+                var diff = Math.abs(friendArr - userScores);
                 totalDiff.push(diff)
             })
 
@@ -35,8 +34,10 @@ module.exports = function(app) {
             return a.totalDiff - b.totalDiff;
         });
         var match = friends[0];
-        console.log(friends)
-        console.log('Your match is below!')
+        console.log(friends);
+        console.log('Your match is below!');
         console.log(match);
+    	res.json(match);
+
     });
-}
+};

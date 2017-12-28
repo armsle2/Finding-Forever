@@ -130,23 +130,66 @@
       <label><input id="input" type="radio" value="5" name="optradio">5</label>
     </div>
   </form>
-  <button class='btn btn-primary' id='submit'>Submit</button>
+  <button class='btn btn-primary' id='submit' data-toggle='modal' data-target='#matchModal'>Submit</button>
+  <!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button>
 
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModal">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </div>
 
-<script>
-	$(document).on('click', '#submit', function(){
-		var q1 = parseFloat($('#question-1 input[name="optradio"]:checked').val())
-		var q2 = parseFloat($('#question-2 input[name="optradio"]:checked').val())
-		var q3 = parseFloat($('#question-3 input[name="optradio"]:checked').val())
-		var q4 = parseFloat($('#question-4 input[name="optradio"]:checked').val())
-		var q5 = parseFloat($('#question-5 input[name="optradio"]:checked').val())
-		var q6 = parseFloat($('#question-6 input[name="optradio"]:checked').val())
-		var userScore = [q1, q2, q3, q4, q5, q6];
-	console.log(userScore);
 
-	})
-</script>
 
 </body>
 </html>
+
+<script type='text/javascript'>
+
+	$('#submit').on('click', function(event){
+		event.preventDefault();
+		var q1 = parseFloat($('#question-1 input[name="optradio"]:checked').val());
+		var q2 = parseFloat($('#question-2 input[name="optradio"]:checked').val());
+		var q3 = parseFloat($('#question-3 input[name="optradio"]:checked').val());
+		var q4 = parseFloat($('#question-4 input[name="optradio"]:checked').val());
+		var q5 = parseFloat($('#question-5 input[name="optradio"]:checked').val());
+		var q6 = parseFloat($('#question-6 input[name="optradio"]:checked').val());
+		var userScore = {
+			scores: [q1, q2, q3, q4, q5, q6]
+		};
+	console.log(userScore);
+
+	$.post('/api/friends', userScore, function(data){
+			if(data){
+				alert('Please wait while we find your match! :)')
+			}
+		
+		}).then(function(data){
+			$('.modal-body').html('');
+			console.log(data);
+			var matchPic = `<img class="modal-img" src='${data.photo}'>`;
+			$('.modal-body').append(matchPic);
+			$('#myModal').modal('toggle');
+
+		});
+
+	});
+</script>
