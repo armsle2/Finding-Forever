@@ -24,9 +24,13 @@
 		</div>
 	</div>
 	<div class='row'>
-			<div class='col-md-12'>
-			<input id="heart" type="image" src="./images/heart.png" name="saveForm" class="animated bounceInDown heart" style="max-width: 145px;" />
+			<div class='col-md-12 heart-sect animated'>
+			<input id="heart" type="image" src="./images/heart.png" name="saveForm" class="animated bounceInDown heart" style="max-width: 175px;" />
+			<div class='middle'>
+				<div id="heart-text"><a href=''>Take<br>Survey</a></div>
 			</div>
+			</div>
+			
 		</div>
 		<!-- </div> -->
 	<!-- </div> -->
@@ -40,13 +44,18 @@
 	var pulse = 'pulse';
 	var animateInfinite = '-webkit-animation-iteration-count';
 	var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-	$('#heart').hover(function(){
+	$(document).one(animationEnd, function(){return console.log('ani done')})
+
+	function pulseOn(){
 		$(this).removeClass(bounce);
-		$(this).addClass(pulse);
-		$(this).css(animateInfinite, 'infinite');
-	}, function(){
-		$(this).css(animateInfinite, '0');
-	})
+		$('.heart-sect').addClass(pulse);
+		$('.heart-sect').css(animateInfinite, 'infinite');
+	}
+	function pulseOff(){
+		$('.heart-sect').css(animateInfinite, '0');
+	}
+	$('#heart').hover(pulseOn, pulseOff);
+	$('#heart-text').hover(pulseOn, pulseOff);
 	$('#saveForm').on('click', function(){
 		alert('you clicked me?!')
 	})
