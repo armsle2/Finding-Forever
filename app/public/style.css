@@ -97,3 +97,6 @@ a:hover {
 	color: white;
     text-decoration: none;
 }
+#heart-text{
+	display: none;
+}

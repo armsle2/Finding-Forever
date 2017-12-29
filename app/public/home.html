@@ -20,15 +20,15 @@
 		<!-- <div class='container'> -->
 			<div class="row">
 				<div class="col-md-12">
-			<h1 id='home-header'>IT'S TIME FOR YOU TO FIND YOUR MATCH!</h1>
+			<h1 id='home-header'>IT'S TIME TO FIND YOUR MATCH!</h1>
 		</div>
 	</div>
 	<div class='row'>
 			<div class='col-md-12 heart-sect animated'>
-			<input id="heart" type="image" src="./images/heart.png" name="saveForm" class="animated bounceInDown heart" style="max-width: 175px;" />
+			<a href='/survey'><input id="heart" type="image" src="./images/heart.png" name="saveForm" class="animated bounceInDown heart" style="max-width: 175px;" />
 			<div class='middle'>
-				<div id="heart-text"><a href=''>Take<br>Survey</a></div>
-			</div>
+				<div class='animated'id="heart-text">Take<br>Survey</div>
+			</div></a>
 			</div>
 			
 		</div>
@@ -44,7 +44,9 @@
 	var pulse = 'pulse';
 	var animateInfinite = '-webkit-animation-iteration-count';
 	var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-	$(document).one(animationEnd, function(){return console.log('ani done')})
+	$(document).one(animationEnd, function(){
+		return $('#heart-text').css('display', 'block').addClass('fadeIn')
+	})
 
 	function pulseOn(){
 		$(this).removeClass(bounce);
