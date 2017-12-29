@@ -16,14 +16,61 @@ font-size: 17px;
 	width: 100%;
 }
 .modal-header{
-	font-family: 'Kanit', sans-serif;
 	border-bottom: 0px; 
     text-align: center;
+}
+
+h1{
+	font-family: 'Kanit', sans-serif;
+
+}
+h2{
+	font-family: 'Arima Madurai', cursive;
+
 }
 .modal-body{
 	padding: 0px 15px;
 }
-#modal-subtitle{
-	font-family: 'Arima Madurai', cursive;
-	
+                
+body{
+  background-image: url(./images/child-couple.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height:100%;
+}
+#home-header{
+	margin-top: 250px;
+	color: lightyellow;
+    font-size: 50px;
+    text-align: center;
+}
+@media only screen and (max-width: 375px){
+	#home-header{
+		margin-top: 130px;
+	}
+}
+#heart{
+	display: block;
+    margin: 0 auto;
+    margin-top: 41px;
+}
+.heart{
+/*	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0s;*/
+  /*-webkit-animation-iteration-count: 4;*/
+}
+
+.layer {
+background: -webkit-linear-gradient(bottom left, rgba(167, 66, 108, 0.8), rgba(110, 179, 166, 0.7) 100%);
+background: -o-linear-gradient(bottom left, rgba(167, 66, 108, 0.8), rgba(110, 179, 166, 0.7)100%);
+background: linear-gradient(to top right, rgba(167, 66, 108, 0.8), rgba(110, 179, 166, 0.7) 100%);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+	position: fixed;
+	overflow-y: scroll;
 }
