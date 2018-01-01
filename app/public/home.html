@@ -53,21 +53,29 @@
 	var animateInfinite = '-webkit-animation-iteration-count';
 	var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 	$(document).one(animationEnd, function(){
-		$('#heart-text').css('display', 'block').addClass('fadeIn')
-		bounceOn();
+		$('#heart-text').css('display', 'block').addClass('fadeIn');
+		animation();
 	})
-
+function animation(){
+	var bounceStart = 
+		setInterval(function(){
+			$('.heart-sect').addClass(bounce);}, 2000);
+	var bounceEnd = 
+		setInterval(function(){
+			$('.heart-sect').removeClass(bounce);}, 4000);
 	function pulseOn(){
 		$(this).removeClass(bounceIn);
+		clearInterval(bounceStart);
+		clearInterval(bounceEnd);
 		$('.heart-sect').addClass(pulse);
 		$('.heart-sect').css(animateInfinite, 'infinite');
 	}
 	function pulseOff(){
-		$('.heart-sect').css(animateInfinite, '0');
-	}
-	function bounceOn(){
-		setInterval(function(){
+		$('.heart-sect').removeClass(pulse);
+		$('.heart-sect').css(animateInfinite, '');
+		bounceStart = setInterval(function(){
 			$('.heart-sect').addClass(bounce);}, 2000);
+		bounceEnd = 
 		setInterval(function(){
 			$('.heart-sect').removeClass(bounce);}, 4000);
 	}
@@ -76,4 +84,5 @@
 	$('#saveForm').on('click', function(){
 		alert('you clicked me?!')
 	})
+}
 </script>
