@@ -128,7 +128,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                     <h1 class="modal-title" id="exampleModal">Here Is Your Match!</h1>
-                                    <h2 id='modal-subtitle'>Meet Keisha</h2>
+                                    <h2 id='modal-subtitle'></h2>
                                 </div>
                                 <div class="modal-body">
                                 </div>
@@ -189,7 +189,9 @@
 					$('.modal-body').html('');
 					console.log(data);
 					var matchPic = `<img class="modal-img" src='${data.photo}'>`;
+					var matchName = data.name;
 					$('.modal-body').append(matchPic);
+					$('.modal-subtitle').html(matchName);
 					$('#myModal').modal('show');
 
 				});
