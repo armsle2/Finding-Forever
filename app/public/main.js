@@ -49,19 +49,19 @@ $('#submit').on('click', function(event){
 		var q5 = parseFloat($('#question-5').val());
 		var q6 = parseFloat($('#question-6').val());
 		var userName = $('#userName').val();
-		var userGender = $('#gender').val();
+		var userInterest = $('#userInterest').val();
 		var userScore = {
 			name: userName,
-			gender: userGender,
+			interest: userInterest,
 			scores: [q1, q2, q3, q4, q5, q6]
 		};
 		function checkSubmission(score){
 			return score > 0;
 		}
 		console.log(userName);
-		console.log(userGender);
+		console.log(userInterest);
 		console.log(userScore.scores.every(checkSubmission))
-		if (userName === ''|| userGender === 'Gender'){
+		if (userName === ''|| userInterest === 'Choose Interest'){
 			console.log('you missed something');
 		}else if (!userScore.scores.every(checkSubmission)){
 			console.log('you missed one');

@@ -3,7 +3,7 @@ var friends = [
 	name: `Justine`,
 	age: 30,
 	gender: `female`,
-	photo: `../data/justine.jpg70`,
+	photo: `../data/justine.jpg`,
 	scores: [5, 2, 3, 5, 4, 1] 
 }, {
 	name: `Keisha`,

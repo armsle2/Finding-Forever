@@ -12,16 +12,18 @@ module.exports = function(app) {
     });
 
     app.post('/api/friends', function(req, res) {
-
+    	var userInterest = req.body.interest;
+    	var genderChoice = [];
         friends.forEach((results, index, arr) => {
+        	if(userInterest === results.gender){
+
             var totalDiff = [];
             var search = results.scores
             var name = results.name
 
             search.forEach((results, index, arr) => {
-                var friendArr = results;
                 var userScores = parseFloat(req.body['scores[]'][index]);
-                var diff = Math.abs(friendArr - userScores);
+                var diff = Math.abs(results - userScores);
                 totalDiff.push(diff)
             })
 
@@ -29,12 +31,16 @@ module.exports = function(app) {
                 return total + num
             }
             results.totalDiff = totalDiff.reduce(getSum)
+        	genderChoice.push(results)
+
+        	}
+
         })
-        friends.sort(function(a, b) {
+        genderChoice.sort(function(a, b) {
             return a.totalDiff - b.totalDiff;
         });
-        var match = friends[0];
-        console.log(friends);
+        var match = genderChoice[0];
+        console.log(genderChoice);
         console.log('Your match is below!');
         console.log(match);
     	res.json(match);
