@@ -20,13 +20,26 @@
                 <div class="col-md-6" style="text-align: center;">
                     <h2 id='survey-header'>Take The Survey!</h2>
                     <h4>Answer the questions below to find your match!</h4>
-                    <h4>Choose between 1 (hate it) and 5 (absolutely love it!)</h4>
+                    <!-- <h4>Choose between 1 (hate it) and 5 (absolutely love it!)</h4> -->
                     <br/>
-                    <div class='form'>
-                    	<div class="question">
-                        <p>How do you feel about ice cream?</p>
-                    </div>
-                        <form class="form-inline" id="question-1">
+                    <form>
+					    <input type="name" class="form-control inputName" id='userName' placeholder="Enter Your Name">
+	                    <select class="form-control form-control-lg form-inline" id="gender">
+						  <option>Gender</option>
+						  <option value='male'>Male</option>
+						  <option value='female'>Female</option>
+						</select>
+	                    <label class="question">How do you feel about ice cream?</label>
+	                    <select class="form-control form-control-lg form-inline" id="question-1">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
+					
+                      <!--   <form class="form-inline">
                             <div class="radio">
                                 <label>
                                     <input id="input" type="radio" value="1" name="optradio">1</label>
@@ -47,140 +60,62 @@
                                 <label>
                                     <input id="input" type="radio" value="5" name="optradio">5</label>
                             </div>
-                        </form>
+                        </form> -->
                         <br/>
-                        <div class="question">
-                        <p>How do you feel about ice cream?</p>
-                    </div>
-                        <form class="form-inline" id="question-2">
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="1" name="optradio">1</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="2" name="optradio">2</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="3" name="optradio">3</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="4" name="optradio">4</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="5" name="optradio">5</label>
-                            </div>
-                        </form>
+                        <label class="question">Do you like to go to the movies?</label>
+                        <select class="form-control form-control-lg form-inline" id="question-2">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
                         <br/>
-                        <div class="question">
-                        <p>How do you feel about ice cream?</p>
-                    </div>
-                        <form class="form-inline" id="question-3">
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="1" name="optradio">1</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="2" name="optradio">2</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="3" name="optradio">3</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="4" name="optradio">4</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="5" name="optradio">5</label>
-                            </div>
-                        </form>
+                        <label class="question">How do you feel about dogs?</label>
+                        <select class="form-control form-control-lg form-inline" id="question-3">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
                         <br/>
-                        <div class="question">
-                        <p>How do you feel about ice cream?</p>
-                    </div>
-                        <form class="form-inline" id="question-4">
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="1" name="optradio">1</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="2" name="optradio">2</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="3" name="optradio">3</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="4" name="optradio">4</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="5" name="optradio">5</label>
-                            </div>
-                        </form>
+                        <label class="question">Are you into fashion?</label>
+                        <select class="form-control form-control-lg form-inline" id="question-4">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
                         <br/>
-                        <div class="question">
-                        <p>How do you feel about ice cream?</p>
-                    </div>
-                        <form class="form-inline" id="question-5">
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="1" name="optradio">1</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="2" name="optradio">2</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="3" name="optradio">3</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="4" name="optradio">4</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="5" name="optradio">5</label>
-                            </div>
-                        </form>
+                        <label class="question">How do you feel about Beyonce?</label>
+                        <select class="form-control form-control-lg form-inline" id="question-5">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
                         <br/>
-                        <div class="question">
-                        <p>How do you feel about ice cream?</p>
+                        <label class="question">How do you feel about exercising?</label>
+                        <select class="form-control form-control-lg form-inline" id="question-6">
+						  <option>Choose One</option>
+						  <option value='1'>1 (Hate It)</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5 (Love It)</option>
+						</select>
+                    </form>
+                    <!-- <br/> -->
+                    <div>
+	                    <button class='btn btn-primary' id='submit' data-toggle='modal' data-target='#matchModal'>Find Forever</button>
                     </div>
-                        <form class="form-inline" id="question-6">
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="1" name="optradio">1</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="2" name="optradio">2</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="3" name="optradio">3</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="4" name="optradio">4</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input id="input" type="radio" value="5" name="optradio">5</label>
-                            </div>
-                        </form>
-                    </div>
-                    <br/>
-                    <button class='btn btn-primary' id='submit' data-toggle='modal' data-target='#matchModal'>Find Forever</button>
                     <br/>
                     <br/>
                     <br/>
@@ -219,30 +154,46 @@
 
 	$('#submit').on('click', function(event){
 		event.preventDefault();
-		var q1 = parseFloat($('#question-1 input[name="optradio"]:checked').val());
-		var q2 = parseFloat($('#question-2 input[name="optradio"]:checked').val());
-		var q3 = parseFloat($('#question-3 input[name="optradio"]:checked').val());
-		var q4 = parseFloat($('#question-4 input[name="optradio"]:checked').val());
-		var q5 = parseFloat($('#question-5 input[name="optradio"]:checked').val());
-		var q6 = parseFloat($('#question-6 input[name="optradio"]:checked').val());
+		var q1 = parseFloat($('#question-1').val());
+		var q2 = parseFloat($('#question-2').val());
+		var q3 = parseFloat($('#question-3').val());
+		var q4 = parseFloat($('#question-4').val());
+		var q5 = parseFloat($('#question-5').val());
+		var q6 = parseFloat($('#question-6').val());
+		var userName = $('#userName').val();
+		var userGender = $('#gender').val();
 		var userScore = {
+			name: userName,
+			gender: userGender,
 			scores: [q1, q2, q3, q4, q5, q6]
 		};
-	console.log(userScore);
+		function checkSubmission(score){
+			return score > 0;
+		}
+		console.log(userName);
+		console.log(userGender);
+		console.log(userScore.scores.every(checkSubmission))
+		if (userName === ''|| userGender === 'Gender'){
+			console.log('you missed something');
+		}else if (!userScore.scores.every(checkSubmission)){
+			console.log('you missed one');
+		}else{
+			console.log(userScore);
 
-	$.post('/api/friends', userScore, function(data){
-			if(data){
-				alert('Please wait while we find your match! :)')
-			}
-		
-		}).then(function(data){
-			$('.modal-body').html('');
-			console.log(data);
-			var matchPic = `<img class="modal-img" src='${data.photo}'>`;
-			$('.modal-body').append(matchPic);
-			$('#myModal').modal('toggle');
+			$.post('/api/friends', userScore, function(data){
+					if(data){
+						alert('Please wait while we find your match! :)')
+					}
+				
+				}).then(function(data){
+					$('.modal-body').html('');
+					console.log(data);
+					var matchPic = `<img class="modal-img" src='${data.photo}'>`;
+					$('.modal-body').append(matchPic);
+					$('#myModal').modal('show');
 
-		});
+				});
+		}
 
 	});
 </script>
