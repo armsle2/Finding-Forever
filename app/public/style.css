@@ -114,6 +114,14 @@ label {
 .modal-backdrop{
 	z-index: 0;
 }
+.modal-footer{
+	text-align: center;
+    border-top: 0px solid #e5e5e5;
+}
+.close{
+	color: #fdfdfd;
+	opacity: .5;
+}
 
 h1 {
     font-family: 'Kanit', sans-serif;
