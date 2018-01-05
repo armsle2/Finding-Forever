@@ -104,7 +104,7 @@ $(document).ready(function() {
                 console.log(data);
                 var matchPic = `<img class="modal-img" src='${data.photo}'>`;
                 var matchName = data.name;
-                $('.modal-title').html(`Here Is Your Match!`);
+                $('.modal-title').html(`Here Is Your Match ${userScore.name}!`);
                 $('.modal-body').html(matchPic);
                 $('#modal-subtitle').html(`Meet ${matchName}`);
                 $('#myModal').modal('toggle');
