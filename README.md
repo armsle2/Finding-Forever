@@ -21,3 +21,6 @@ Users will be able to choose their match to be somebody who has the highest tota
 
 Demo:
 
+![friend-finder-landing](https://user-images.githubusercontent.com/33161495/34592894-55cd5d28-f195-11e7-83b2-277c924d771a.gif)
+
+![friend-finder](https://user-images.githubusercontent.com/33161495/34592898-5e058394-f195-11e7-9686-fab01826bb7d.gif)
