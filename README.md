@@ -1,4 +1,4 @@
-# friend-finder-app
+# finding-forever
 
 Welcome to the Friend Finder App where you can find a friend forever!
 
