@@ -1,6 +1,6 @@
 # finding-forever
 
-Welcome to the Friend Finder App where you can find a friend forever!
+Welcome to the Finding Forever App where you can find a friend forever!
 
 Simply just take a quick survey so we can find the right person for you.
 
